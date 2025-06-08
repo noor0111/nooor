@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Salon Management System</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- CLIENTS -->
+    <div class="container mt-5">
+        <h2 class="text-center">Clients</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped" id="clientstable">
+                <thead class="table-dark">
+                    <tr>
+                        <th>client_id</th>
+                        <th>first_name</th>
+                        <th>last_name</th>
+                        <th>phone</th>
+                        <th>email</th>
+                        <th>birth_date</th>
+                        <th>join_date</th>
+                        <th>client_notes</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- STAFF -->
+    <div class="container mt-5">
+        <h2 class="text-center">Staff</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped" id="stafftable">
+                <thead class="table-dark">
+                    <tr>
+                        <th>staff_id</th>
+                        <th>first_name</th>
+                        <th>last_name</th>
+                        <th>phone</th>
+                        <th>email</th>
+                        <th>hire_date</th>
+                        <th>position</th>
+                        <th>salary</th>
+                        <th>active</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="container mt-5">
+        <h2 class="text-center">Services</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped" id="servicestable">
+                <thead class="table-dark">
+                    <tr>
+                        <th>service_id</th>
+                        <th>service_name</th>
+                        <th>description</th>
+                        <th>duration_min</th>
+                        <th>base_price</th>
+                        <th>category</th>
+                        <th>active</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- APPOINTMENTS -->
+    <div class="container mt-5">
+        <h2 class="text-center">Appointments</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped" id="appointmentstable">
+                <thead class="table-dark">
+                    <tr>
+                        <th>appointment_id</th>
+                        <th>client_id</th>
+                        <th>service_id</th>
+                        <th>staff_id</th>
+                        <th>appointment_date</th>
+                        <th>start_time</th>
+                        <th>end_time</th>
+                        <th>status</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- PRODUCTS -->
+    <div class="container mt-5">
+        <h2 class="text-center">Products</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped" id="productstable">
+                <thead class="table-dark">
+                    <tr>
+                        <th>product_id</th>
+                        <th>product_name</th>
+                        <th>brand</th>
+                        <th>category</th>
+                        <th>purchase_price</th>
+                        <th>retail_price</th>
+                        <th>quantity_in_stock</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- SERVICE PRODUCTS (junction) -->
+    <div class="container mt-5">
+        <h2 class="text-center">Service Products</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped" id="serviceproductstable">
+                <thead class="table-dark">
+                    <tr>
+                        <th>service_id</th>
+                        <th>product_id</th>
+                        <th>quantity_used</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- STAFF SERVICES (junction) -->
+    <div class="container mt-5">
+        <h2 class="text-center">Staff Services</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped" id="staffservicestable">
+                <thead class="table-dark">
+                    <tr>
+                        <th>staff_id</th>
+                        <th>service_id</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- PAYMENTS -->
+    <div class="container mt-5">
+        <h2 class="text-center">Payments</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped" id="paymentstable">
+                <thead class="table-dark">
+                    <tr>
+                        <th>payment_id</th>
+                        <th>appointment_id</th>
+                        <th>client_id</th>
+                        <th>payment_date</th>
+                        <th>payment_amount</th>
+                        <th>payment_method</th>
+                        <th>tip_amount</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- CLIENT FEEDBACK -->
+    <div class="container mt-5">
+        <h2 class="text-center">Client Feedback</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped" id="feedbacktable">
+                <thead class="table-dark">
+                    <tr>
+                        <th>feedback_id</th>
+                        <th>client_id</th>
+                        <th>appointment_id</th>
+                        <th>rating</th>
+                        <th>comments</th>
+                        <th>feedback_date</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- PROMOTIONS -->
+    <div class="container mt-5 mb-5">
+        <h2 class="text-center">Promotions</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped" id="promotionstable">
+                <thead class="table-dark">
+                    <tr>
+                        <th>promotion_id</th>
+                        <th>promotion_name</th>
+                        <th>description</th>
+                        <th>discount_percent</th>
+                        <th>start_date</th>
+                        <th>end_date</th>
+                        <th>applicable_services</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="JS/table.js"></script>
+</body>
+
+</html>
