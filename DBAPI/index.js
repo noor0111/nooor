@@ -29,7 +29,7 @@ const tables = [
     'promotions'
 ];
 
-// Auto-generate GET routes for each table
+
 for (const table of tables) {
     app.get(`/${table.toLowerCase()}`, async (req, res) => {
         try {
@@ -202,6 +202,7 @@ app.post('/promotions', async (req, res) => {
         res.status(500).json({ error: err.message });
     }
 });
+
 
 // Server listening
 

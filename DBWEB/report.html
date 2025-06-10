@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Salon Dashboard - Summary Report</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<nav> 
+    <!-- Navbar placeholder -->
+    <div id="navbar-container"></div>
+    <script>
+        fetch('navbar.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('navbar-container').innerHTML = html;
+        });
+    </script>
+</nav>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Salon Management Dashboard</h2>
+    <div class="row justify-content-center text-center">
+    <!-- Total Clients -->
+    <div class="col-md-4 mb-3">
+        <div class="card shadow">
+            <div class="card-body">
+                <h5 class="card-title">Total Clients</h5>
+                <p id="clients" class="display-6 fw-bold">--</p>
+                <div class="btn-group">
+                    <button class="btn btn-outline-success btn-sm" onclick="loadCount('clients')">Show Count</button>
+                    <button class="btn btn-outline-secondary btn-sm" onclick="hideCount('clients')">Hide</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Total Services -->
+    <div class="col-md-4 mb-3">
+        <div class="card shadow">
+            <div class="card-body">
+                <h5 class="card-title">Total Services</h5>
+                <p id="services" class="display-6 fw-bold">--</p>
+                <div class="btn-group">
+                    <button class="btn btn-outline-success btn-sm" onclick="loadCount('services')">Show Count</button>
+                    <button class="btn btn-outline-secondary btn-sm" onclick="hideCount('services')">Hide</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Total Staff -->
+    <div class="col-md-4 mb-3">
+        <div class="card shadow">
+            <div class="card-body">
+                <h5 class="card-title">Total Staff</h5>
+                <p id="staff" class="display-6 fw-bold">--</p>
+                <div class="btn-group">
+                    <button class="btn btn-outline-success btn-sm" onclick="loadCount('staff')">Show Count</button>
+                    <button class="btn btn-outline-secondary btn-sm" onclick="hideCount('staff')">Hide</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Total Products -->
+    <div class="col-md-4 mb-3">
+        <div class="card shadow">
+            <div class="card-body">
+                <h5 class="card-title">Total Products</h5>
+                <p id="products" class="display-6 fw-bold">--</p>
+                <div class="btn-group">
+                    <button class="btn btn-outline-success btn-sm" onclick="loadCount('products')">Show Count</button>
+                    <button class="btn btn-outline-secondary btn-sm" onclick="hideCount('products')">Hide</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Total Appointments -->
+    <div class="col-md-4 mb-3">
+        <div class="card shadow">
+            <div class="card-body">
+                <h5 class="card-title">Total Appointments</h5>
+                <p id="appointments" class="display-6 fw-bold">--</p>
+                <div class="btn-group">
+                    <button class="btn btn-outline-success btn-sm" onclick="loadCount('appointments')">Show Count</button>
+                    <button class="btn btn-outline-secondary btn-sm" onclick="hideCount('appointments')">Hide</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Total Payments -->
+    <div class="col-md-4 mb-3">
+        <div class="card shadow">
+            <div class="card-body">
+                <h5 class="card-title">Total Payments</h5>
+                <p id="payments" class="display-6 fw-bold">--</p>
+                <div class="btn-group">
+                    <button class="btn btn-outline-success btn-sm" onclick="loadCount('payments')">Show Count</button>
+                    <button class="btn btn-outline-secondary btn-sm" onclick="hideCount('payments')">Hide</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Total Feedback -->
+    <div class="col-md-4 mb-3">
+        <div class="card shadow">
+            <div class="card-body">
+                <h5 class="card-title">Total Feedback</h5>
+                <p id="feedback" class="display-6 fw-bold">--</p>
+                <div class="btn-group">
+                    <button class="btn btn-outline-success btn-sm" onclick="loadCount('feedback')">Show Count</button>
+                    <button class="btn btn-outline-secondary btn-sm" onclick="hideCount('feedback')">Hide</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Total Promotions -->
+    <div class="col-md-4 mb-3">
+        <div class="card shadow">
+            <div class="card-body">
+                <h5 class="card-title">Total Promotions</h5>
+                <p id="promotions" class="display-6 fw-bold">--</p>
+                <div class="btn-group">
+                    <button class="btn btn-outline-success btn-sm" onclick="loadCount('promotions')">Show Count</button>
+                    <button class="btn btn-outline-secondary btn-sm" onclick="hideCount('promotions')">Hide</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<!-- Report JS -->
+<script src="JS/report.js"></script>
+<script src="JS/charts.js"></script>
+
+</body>
+
+</html>

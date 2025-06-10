@@ -15,6 +15,20 @@
 
 <body>
 
+    <nav>
+        <!-- Placeholder for shared navbar -->
+        <div id="navbar-container"></div>
+
+        <!-- Inject navbar.html using JavaScript -->
+        <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(html => {
+            document.getElementById('navbar-container').innerHTML = html;
+            });
+        </script>
+    </nav>
+
     <!-- CLIENTS -->
     <div class="container mt-5">
         <h2 class="text-center">Clients</h2>
